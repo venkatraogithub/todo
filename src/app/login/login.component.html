@@ -1,0 +1,18 @@
+<small *ngIf='inValidLogin'>{{ messsage }}</small>
+<div>
+    <!-- taking data from component ts and populating in front end also called as ONE WAY DATA BINDING-->
+    <!-- User Name : <input type="text" name="username" value ="{{ username }}">  -->
+
+    <!-- Below is taking data from front end and populating in component ts also called as TWO WAY DATA BINDING -->
+    User Name :<input type="text" name="username" [(ngModel)]="username">
+
+    <!--  one way data binding below -->
+    <!-- Password : <input type="password" name ="password" value="{{ password }}"> -->
+
+    <!-- two way data binding below -->
+    Password :<input type="password" name="password" [(ngModel)]="password">
+
+    <!-- {{ username }} -->
+
+    <button (click)=handleLogin()>Login</button>
+</div>
